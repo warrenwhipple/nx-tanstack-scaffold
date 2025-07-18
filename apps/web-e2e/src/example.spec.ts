@@ -1,8 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
+test('shows welcome text', async ({ page }) => {
   await page.goto('/');
-
-  // Expect h1 to contain a substring.
-  expect(await page.locator('h1').innerText()).toContain('Welcome');
+  expect(await page.locator('h3').innerText()).toContain('Welcome Home');
 });
